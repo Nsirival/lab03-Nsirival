@@ -73,7 +73,7 @@ bool pointsApproxEqual(Point p1,
 bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
 
-  return (pointsApproxEqual(b1.ul, b2.ul, tolerance) && fabs(b1.ul.x - b2.ul.x) < tolerance && fabs(b1.ul.y - b2.ul.y) < tolerance);
+  return (pointsApproxEqual(b1.ul, b2.ul, tolerance) && fabs(b1.width - b2.width) < tolerance && fabs(b1.height - b2.height) < tolerance);
 }
 
 
