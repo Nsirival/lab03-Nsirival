@@ -13,13 +13,12 @@ using namespace std;
 // Compute distance between two points
 
 double distanceBetween(Point p, Point q) {
-  return 99999.9; // @@@ STUB
   // HINTS: The distance formula is something you hopefully remember
   //   from H.S. algebra, but if not, Wikipedia is your friend.
   //   The sqrt function is available when you use #include <cmath>, 
   //   and pow(expresssion,2.0) will return expression squared.
   // You can access p.x, p.y, q.x and q.y and use those in your formula.
-  return sqrt(pow(p.x - q.x, 2) + pow (p.y - q.y, 2)))
+  return sqrt(pow(p.x - q.x, 2) + pow (p.y - q.y, 2)));
 
 }
 
@@ -35,6 +34,8 @@ double distanceBetween(Point p, Point q) {
 
 
 void initPoint(struct Point *p, double xVal, double yVal) {
+  *p.x = xVal;
+  *p.y = yVal;
   //return; //@@@ for a void function, the stub is just a bare return that does nothing
 }
 
