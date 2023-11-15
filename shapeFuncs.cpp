@@ -34,8 +34,8 @@ double distanceBetween(Point p, Point q) {
 
 
 void initPoint(struct Point *p, double xVal, double yVal) {
-  *p.x = xVal;
-  *p.y = yVal;
+  (*p).x = xVal;
+  (*p).y = yVal;
   //return; //@@@ for a void function, the stub is just a bare return that does nothing
 }
 
