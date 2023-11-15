@@ -62,7 +62,7 @@ bool pointsApproxEqual(Point p1,
   // Two points are approximately equal if the distance between them
   // is less than our tolerance.  (If we want to test for 
   // exact equality, we can pass in a value of zero.)
-
+  
   return distanceBetween(p1,p2) < tolerance;
 
 }
@@ -83,6 +83,8 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
   // TODO: FILL THIS IN WITH APPROPRIATE CODE
 
+  if(pointsApproxEqual(b1.ul.x, b2.ul.x, tolerance) && pointsApproxEqual(b1.ul.y, b2.ul.y, tolerance) && fabs(b1.ul.x - b2.ul.x) < tolerance && fabs(b1.ul.y - b2.ul.y) < tolerance)
+    	return true;
   return false; // STUB!  TODO: Delete this line and comment and replace with appropriate code
 }
 
@@ -98,11 +100,15 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
 void initBox(struct Box *b, double ulx, double uly, double w, double h)
 {
+	(*b).ul.x = ulx;
+	(*b).ul.y = uly;
+	(*b).width = w;
+	(*b).height = h;
   return; // @@@ For a void function a "naked return" is a "do nothing" stub
 }
 
 
 double areaOfBox(Box b) {
-  return -42.0;  /* stub---make sure all tests fail initially */
+  return (b.width * b.height);
   // you can use b.width to access width, and b.height to access height
 }
