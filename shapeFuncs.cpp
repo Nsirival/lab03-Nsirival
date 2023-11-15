@@ -83,7 +83,7 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
   // TODO: FILL THIS IN WITH APPROPRIATE CODE
 
-  if(pointsApproxEqual(b1.ul.x, b2.ul.x, tolerance) && pointsApproxEqual(b1.ul.y, b2.ul.y, tolerance) && fabs(b1.ul.x - b2.ul.x) < tolerance && fabs(b1.ul.y - b2.ul.y) < tolerance)
+  if(pointsApproxEqual(b1.ul, b2.ul, tolerance) && fabs(b1.ul.x - b2.ul.x) < tolerance && fabs(b1.ul.y - b2.ul.y) < tolerance)
     	return true;
   return false; // STUB!  TODO: Delete this line and comment and replace with appropriate code
 }
