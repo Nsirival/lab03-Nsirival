@@ -83,7 +83,7 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
   // TODO: FILL THIS IN WITH APPROPRIATE CODE
 
-  if(pointsApproxEqual(b1.x, b2.x, tolerance) && pointsApproxEqual(b1.y, b2.y, tolerance) && fabs(b1.x - b2.x) < tolerance && fabs(b1.y - b2.y) < tolerance)
+  if(pointsApproxEqual(b1.ul.x, b2.ul.x, tolerance) && pointsApproxEqual(b1.ul.y, b2.ul.y, tolerance) && fabs(b1.ul.x - b2.ul.x) < tolerance && fabs(b1.ul.y - b2.ul.y) < tolerance)
     	return true;
   return false; // STUB!  TODO: Delete this line and comment and replace with appropriate code
 }
@@ -100,8 +100,8 @@ bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
 void initBox(struct Box *b, double ulx, double uly, double w, double h)
 {
-	(*b).x = ulx;
-	(*b).y = uly;
+	(*b).ul.x = ulx;
+	(*b).ul.y = uly;
 	(*b).width = w;
 	(*b).height = h;
   return; // @@@ For a void function a "naked return" is a "do nothing" stub
