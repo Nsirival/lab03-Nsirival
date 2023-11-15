@@ -53,7 +53,7 @@ string boxToString(Box b, int precision) {
 
   ostringstream oss;
   oss << setprecision(precision);
-  oss << "ul=(" << b.ul.x << "," << b.ul.y << "),w=" << b.width << ",h=" << b.height << endl;
+  oss << "ul=(" << b.ul.x << "," << b.ul.y << "),w=" << b.width << ",h=" << b.height;
 	 return oss.str();
 }
  
@@ -73,10 +73,7 @@ bool pointsApproxEqual(Point p1,
 bool boxesApproxEqual(Box b1, Box b2, double tolerance) {
 
 
-  if(pointsApproxEqual(b1.ul, b2.ul, tolerance) && fabs(b1.ul.x - b2.ul.x) < tolerance && fabs(b1.ul.y - b2.ul.y) < tolerance){
-    	return true;
-}
-  return false; // STUB!  TODO: Delete this line and comment and replace with appropriate code
+  return (pointsApproxEqual(b1.ul, b2.ul, tolerance) && fabs(b1.ul.x - b2.ul.x) < tolerance && fabs(b1.ul.y - b2.ul.y) < tolerance)
 }
 
 
