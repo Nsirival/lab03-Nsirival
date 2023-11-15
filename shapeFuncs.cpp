@@ -18,7 +18,7 @@ double distanceBetween(Point p, Point q) {
   //   The sqrt function is available when you use #include <cmath>, 
   //   and pow(expresssion,2.0) will return expression squared.
   // You can access p.x, p.y, q.x and q.y and use those in your formula.
-  return sqrt(pow(p.x - q.x, 2) + pow (p.y - q.y, 2)));
+  return sqrt(pow(p.x - q.x, 2) + pow (p.y - q.y, 2));
 
 }
 
